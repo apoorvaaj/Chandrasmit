@@ -1,6 +1,10 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Interactive 3D model of duplex 1204 in Pune — 12th and 13th floors.">
 <title>Duplex 1204 in 3D</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
@@ -18,7 +22,8 @@
 :root[data-theme="dark"]{
   --stage:#10191c; --panel:rgba(20,31,35,.92); --ink:#e8eeec; --muted:#9aaaa9;
   --line:rgba(232,238,236,.14); --sea:#5fb3b4; --brass:#d3b16c; --chip:#1b292d; color-scheme:dark}
-html,body{height:100%}
+html,body{height:100%;margin:0}
+*{box-sizing:border-box}
 [hidden]{display:none!important}
 body{background:var(--stage);color:var(--ink);font-family:var(--f-body);overflow:hidden;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
@@ -64,6 +69,8 @@ button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid
   #tools input[type=range]{width:90px}
 }
 </style>
+</head>
+<body>
 
 <div id="stage" aria-label="3D model of duplex 1204"></div>
 <div id="labels"></div>
@@ -907,5 +914,5 @@ if(reduce)controls.enableDamping=false;
 window.__duplex={setMode:k=>btns[k].click(),renderer,camera,controls};
 })();
 </script>
-
-</body></html>
+</body>
+</html>
