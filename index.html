@@ -91,7 +91,7 @@ button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid
 <div id="tools" class="panel">
   <label for="cut">Wall height <input id="cut" type="range" min="0.6" max="3" step="0.1" value="2.2"></label>
   <span id="cutv">2.2 m</span>
-  <button id="lblBtn" class="tbtn" aria-pressed="true">Labels</button>
+  <button id="lblBtn" class="tbtn" aria-pressed="false">Labels</button>
   <button id="topBtn" class="tbtn" aria-pressed="false">Plan view</button>
   <button id="resetBtn" class="tbtn">Reset view</button>
 </div>
@@ -864,7 +864,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',sync
 new MutationObserver(syncBg).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
 
 /* labels */
-const lblHost=document.getElementById('labels');let labels=[];let showLabels=true;
+const lblHost=document.getElementById('labels');let labels=[];let showLabels=false;
 function buildLabels(){lblHost.innerHTML='';labels=[];
   const sets=[];if(mode==='12'||mode==='x')sets.push([LBL12,0]);if(mode!=='12')sets.push([LBL13,g13.position.y]);
   sets.forEach(([arr,y])=>arr.forEach(([n,dm,px,pz])=>{const el=document.createElement('div');el.className='lbl';el.innerHTML=`<span>${n}</span>${dm?`<em>${dm}</em>`:''}`;lblHost.appendChild(el);
